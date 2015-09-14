@@ -50,6 +50,18 @@ html(lang="ja")
         p 渋谷駅からマークシティー沿いに進むと、道元坂上の交番が見えます。 交番の前の道を渡り、道なりに進むと第一暁ビルがあります。その5階がスクーキッズです。
 
     footer
+      section
+        h4 Service
+        ul
+          each list, i in ['コース', 'ワークショップ', '企業研修', '特定商取引に関する表示']
+            li: a(href="#")= list
+      section
+        h4 Information
+        ul
+          each list, i in ['よくあるご質問', '会場案内', '利用規約', '運営会社']
+            li: a(href="#")= list
+
+      small &copy; 2009 - 2015 schoo
 
     // build:js scripts/main.js
     script(src='scripts/script.js')
