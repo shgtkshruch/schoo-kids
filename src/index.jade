@@ -6,7 +6,19 @@ html(lang="ja")
     link(rel='stylesheet', href='styles/style.css', media='all')
   body
     header
+      h1 小学生のプログラミング・スクール「スクーキッズ」
+      a(href="#") 無料体験してみよう
+
       nav
+        ul
+          each list, i in ['facebook', 'twitter', 'pinterest', 'Line']
+            li: a(href="#")= list
+        h2
+          a(href-"#")
+            img(src="images/schoologo.svg" alt="スクーWebキャンパスロゴ画像")
+        ul
+          each list, i in [{text: 'カリキュラム', link: '#'}, {text: '教室', link: '#'}, {text: 'アクセス', link: '#'}, {text: 'お問い合わせ', link: '#'}]
+            li: a(href="#{list.link}")= list.text
 
     main
       article
